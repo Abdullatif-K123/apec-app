@@ -351,7 +351,7 @@ a {
     align-items: center;
     height: 100vh;
     background-color: rgb(255, 255, 255);
-    row-gap: 20px;
+    row-gap: 10px;
   }
   .typeProduct {
     display: flex;

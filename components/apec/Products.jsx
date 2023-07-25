@@ -11,7 +11,7 @@ const Products = ({ backToHome }) => {
       <Image
         src={apecWhite}
         width={150}
-        height={150}
+        height={100}
         onClick={() => {
           router.push("/");
         }}

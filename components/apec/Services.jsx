@@ -10,7 +10,7 @@ const Services = ({ backToHome }) => {
       <Image
         src={apecRed}
         width={150}
-        height={150}
+        height={100}
         onClick={() => {
           router.push("/");
         }}

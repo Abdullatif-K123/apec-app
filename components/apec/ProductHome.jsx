@@ -5,7 +5,9 @@ import BottomSec from "../UI/BottomSec";
 import carWatshing from "../../public/assets/jpg&png/carWashing.jpg";
 import Services from "./Services";
 import Products from "./Products";
+import { useRouter } from "next/router";
 const ProductHome = () => {
+  const router = useRouter();
   const [clickHandler, setClickHandler] = useState("");
   const backToHome = () => {
     setClickHandler("");
@@ -18,7 +20,14 @@ const ProductHome = () => {
   }
   return (
     <div className="productMain">
-      <Image src={apecRed} width={150} height={150} />
+      <Image
+        src={apecRed}
+        width={150}
+        height={100}
+        onClick={() => {
+          router.push("/");
+        }}
+      />
       <div className="typeProduct">
         <div className="smallCardLeft">
           <Image src={carWatshing} width={130} height={130} />

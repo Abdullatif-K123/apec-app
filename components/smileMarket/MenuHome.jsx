@@ -3,7 +3,9 @@ import Image from "next/image";
 import smileMarket from "../../public/assets/svg/smileMarket.svg";
 import smile from "../../public/assets/svg/smile.svg";
 import MenuItems from "./MenuItems";
+import { useRouter } from "next/router";
 const MenuHome = () => {
+  const router = useRouter();
   const [clickedMenu, setClickedMenu] = useState(false);
   const clickedMenuHandle = () => {
     setClickedMenu(false);
@@ -13,7 +15,15 @@ const MenuHome = () => {
   }
   return (
     <div className="menuMain">
-      <Image src={smileMarket} width={210} height={210} className="images" />
+      <Image
+        src={smileMarket}
+        width={210}
+        height={210}
+        className="images"
+        onClick={() => {
+          router.push("/");
+        }}
+      />
       <Image src={smile} width={195} height={195} />
       <div
         className="menuContainer"

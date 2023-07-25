@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import smileMarket from "../../public/assets/svg/smileMarket.svg";
-
+import { useRouter } from "next/router";
 const DUMMY_DATA = [
   { name: "Espresso", price: 1 },
   { name: "Double Espresso", price: 1 },
@@ -41,6 +41,7 @@ const DUMMY_DATA = [
   },
 ];
 const MenuItems = ({ clickedMenuHandle }) => {
+  const router = useRouter();
   const lastTwoItems = DUMMY_DATA.slice(DUMMY_DATA.length - 2);
   return (
     <div className="menuShow">
@@ -48,7 +49,9 @@ const MenuItems = ({ clickedMenuHandle }) => {
         src={smileMarket}
         width={180}
         height={100}
-        onClick={clickedMenuHandle}
+        onClick={() => {
+          router.push("/");
+        }}
       />
       <dir className="menuItems">
         <div className="headMenu">
