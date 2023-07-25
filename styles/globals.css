@@ -111,7 +111,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 15px;
+    row-gap: 35px;
     font-family: "montserrat";
   }
   .headSection {
@@ -189,8 +189,10 @@ a {
 
   /* Bottom Section */
   .bottomSection {
+    position: fixed;
     display: flex;
-    margin-top: auto;
+    bottom: 0;
+    right: 0;
     margin-left: auto;
     column-gap: 20px;
   }
@@ -227,10 +229,10 @@ a {
     background-color: #c31922;
   }
   .redIcon > h3 {
-    color: #fff;
+    color: rgb(255, 255, 255);
   }
   .redIcon > p {
-    color: #fff;
+    color: rgb(255, 255, 255);
   }
 
   /* Menu section  */
@@ -347,7 +349,7 @@ a {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     row-gap: 20px;
   }
   .typeProduct {
@@ -403,7 +405,7 @@ a {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     row-gap: 10px;
   }
   .servicesBody {
