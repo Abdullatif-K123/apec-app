@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import smileMarket from "../../public/assets/svg/smileMarket.svg";
 import { useRouter } from "next/router";
+import backSpaceMarket from "../../public/assets/jpg&png/backArrow.png";
 const DUMMY_DATA = [
   { name: "Espresso", price: 1 },
   { name: "Double Espresso", price: 1 },
@@ -92,6 +93,13 @@ const MenuItems = ({ clickedMenuHandle }) => {
           </div>
         </div>
       </dir>
+      <Image
+        src={backSpaceMarket}
+        width={50}
+        height={50}
+        className=" backspaceArrowTop"
+        onClick={clickedMenuHandle}
+      />
     </div>
   );
 };

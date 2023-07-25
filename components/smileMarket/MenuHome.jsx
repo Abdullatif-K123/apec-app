@@ -4,6 +4,7 @@ import smileMarket from "../../public/assets/svg/smileMarket.svg";
 import smile from "../../public/assets/svg/smile.svg";
 import MenuItems from "./MenuItems";
 import { useRouter } from "next/router";
+import backSpaceMarket from "../../public/assets/jpg&png/backArrow.png";
 const MenuHome = () => {
   const router = useRouter();
   const [clickedMenu, setClickedMenu] = useState(false);
@@ -33,6 +34,15 @@ const MenuHome = () => {
       >
         MENU
       </div>
+      <Image
+        src={backSpaceMarket}
+        width={50}
+        height={50}
+        className="backspaceArrowTop"
+        onClick={() => {
+          router.push("/");
+        }}
+      />
     </div>
   );
 };
