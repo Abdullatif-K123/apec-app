@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LoadingPage from "./LoadingPage";
+
 import BottomSec from "../UI/BottomSec";
 import Image from "next/image";
 import ApecRounded from "../../public/assets/svg/apecRound.svg";
@@ -7,17 +7,7 @@ import SmileMarket from "../../public/assets/svg/smileMarketRound.svg";
 import { useRouter } from "next/router";
 
 const HomePage = (props) => {
-  const [loading, setLoading] = useState(true);
   const router = useRouter();
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, [2800]);
-    return () => clearTimeout(timer);
-  }, []);
-  if (loading) {
-    return <LoadingPage />;
-  }
 
   return (
     <div className="homeMain">
