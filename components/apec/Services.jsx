@@ -3,10 +3,19 @@ import Image from "next/image";
 import BottomSec from "../UI/BottomSec";
 import apecRed from "../../public/assets/svg/apecRed.svg";
 import { useRouter } from "next/router";
+import backSpaceRed from "../../public/assets/jpg&png/backArrowRed.png";
+
 const Services = ({ backToHome }) => {
   const router = useRouter();
   return (
     <div className="servicesMain">
+      <Image
+        src={backSpaceRed}
+        width={50}
+        height={50}
+        className=" backspaceArrowTop"
+        onClick={backToHome}
+      />
       <Image
         src={apecRed}
         width={150}

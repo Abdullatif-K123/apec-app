@@ -3,11 +3,19 @@ import React from "react";
 import Image from "next/image";
 import BottomSec from "../UI/BottomSec";
 import apecWhite from "../../public/assets/svg/apeWhite.svg";
+import backSpaceRed from "../../public/assets/jpg&png/backSpaceWhite.png";
 import { useRouter } from "next/router";
 const Products = ({ backToHome }) => {
   const router = useRouter();
   return (
     <div className="productsPage">
+      <Image
+        src={backSpaceRed}
+        width={50}
+        height={50}
+        className=" backspaceArrowTop"
+        onClick={backToHome}
+      />
       <Image
         src={apecWhite}
         width={150}

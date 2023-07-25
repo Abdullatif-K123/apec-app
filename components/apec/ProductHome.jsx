@@ -6,6 +6,7 @@ import carWatshing from "../../public/assets/jpg&png/carWashing.jpg";
 import Services from "./Services";
 import Products from "./Products";
 import { useRouter } from "next/router";
+import backSpaceRed from "../../public/assets/jpg&png/backArrowRed.png";
 const ProductHome = () => {
   const router = useRouter();
   const [clickHandler, setClickHandler] = useState("");
@@ -20,6 +21,15 @@ const ProductHome = () => {
   }
   return (
     <div className="productMain">
+      <Image
+        src={backSpaceRed}
+        width={50}
+        height={50}
+        className=" backspaceArrowTop"
+        onClick={() => {
+          router.push("/");
+        }}
+      />
       <Image
         src={apecRed}
         width={150}
