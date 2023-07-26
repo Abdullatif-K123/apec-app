@@ -68,7 +68,7 @@ a {
   .doted {
     position: fixed;
     margin: 0 auto;
-    z-index: -1;
+    z-index: 0;
   }
   .doted2 {
     position: fixed;
@@ -511,7 +511,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0px 30px 50px 30px;
+    padding: 0px 30px 40px 30px;
     column-gap: 25px;
   }
   .cardServiceImage {
@@ -632,5 +632,21 @@ a {
     bottom: 15px;
     left: 0;
     z-index: 1;
+  }
+}
+
+@media (max-width: 380px) {
+  .serviceBodyCard {
+    column-gap: 15px;
+
+    padding: 0px 30px 40px 30px;
+  }
+  .serviceDesc > h1 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .serviceDesc > p {
+    font-size: 9px;
+    opacity: 0.9;
   }
 }
