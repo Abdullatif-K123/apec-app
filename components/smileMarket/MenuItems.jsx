@@ -13,10 +13,36 @@ const DUMMY_DATA = [
     price: 1,
   },
   {
-    name: "Cappuccino",
-    secondary: "Coffee, nestle and milk",
+    name: "Nesscafe special",
+    secondary: "Big Cup, nestle and Nescafe",
     price: 1,
   },
+  {
+    name: "Nesscafe special",
+    secondary: "Big Cup, nestle and Nescafe",
+    price: 1,
+  },
+  {
+    name: "Nesscafe special",
+    secondary: "Big Cup, nestle and Nescafe",
+    price: 1,
+  },
+  {
+    name: "Nesscafe special",
+    secondary: "Big Cup, nestle and Nescafe",
+    price: 1,
+  },
+  {
+    name: "Nesscafe special",
+    secondary: "Big Cup, nestle and Nescafe",
+    price: 1,
+  },
+  {
+    name: "Nesscafe special",
+    secondary: "Big Cup, nestle and Nescafe",
+    price: 1,
+  },
+
   { name: "Caffe Aux Lait", price: 1 },
   { name: "Nesscafe", price: 1 },
   {

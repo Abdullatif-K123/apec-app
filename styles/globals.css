@@ -119,7 +119,7 @@ a {
   /* Home page */
   .homeMain {
     background-color: #b4131c;
-    height: 105vh;
+    height: 103vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -293,6 +293,7 @@ a {
   }
   /* MenuShow */
   .menuShow {
+    padding-top: 8px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -300,11 +301,14 @@ a {
     height: 100vh;
     display: flex;
     flex-direction: column;
+
     align-items: center;
     row-gap: 10px;
   }
   .menuItems {
     display: flex;
+    height: 690px;
+    overflow: auto;
     flex-direction: column;
     align-items: center;
     row-gap: 7px;
