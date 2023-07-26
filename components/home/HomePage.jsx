@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import BottomSec from "../UI/BottomSec";
 import Image from "next/image";
-import ApecRounded from "../../public/assets/svg/apecRound.svg";
+import ApecRounded from "../../public/assets/jpg&png/apecRound.png";
 import SmileMarket from "../../public/assets/svg/smileMarketRound.svg";
 import { useRouter } from "next/router";
 
