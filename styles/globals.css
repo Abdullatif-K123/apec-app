@@ -36,6 +36,12 @@ a {
 
   font-weight: bold;
 }
+@font-face {
+  font-family: "montserrat";
+  src: url("../public//assets//montassrat/Montserrat-Regular.ttf");
+
+  font-weight: 200;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -532,10 +538,16 @@ a {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #b4131c;
+    background-color: rgb(180, 19, 28);
     row-gap: 10px;
   }
-  .productBody {
+  .productMenu {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 40px;
   }
   .productBody > h2 {
     font-size: 27px;
@@ -543,5 +555,41 @@ a {
     color: #484848;
     font-family: "montserrat";
   }
-  /* Products section */
+  /* Products Card */
+  .productCardMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
+    width: 85%;
+    min-height: 100px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+  .imagProduct {
+    margin-top: -49px;
+    margin-left: -15px;
+  }
+  .prdCardDesc {
+    font-family: "montserrat";
+  }
+  .prdCardDesc > h3 {
+    color: rgb(208, 3, 31);
+  }
+  .prdCardDesc > h4 {
+    color: rgb(71, 71, 71);
+  }
+  .prdCardDesc > p {
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 200;
+  }
+  .prdCardPrice {
+    padding: 22px 25px;
+    background-color: rgb(72, 72, 72);
+    border-radius: 50%;
+    position: relative;
+    margin-right: -15px;
+  }
 }

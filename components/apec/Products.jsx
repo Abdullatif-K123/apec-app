@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import BottomSec from "../UI/BottomSec";
 import apecWhite from "../../public/assets/svg/apeWhite.svg";
+import ProductCard from "../UI/ProductCard";
 import backSpaceRed from "../../public/assets/jpg&png/backSpaceWhite.png";
 import { useRouter } from "next/router";
 const DUMMY_DATA = [
@@ -59,6 +60,20 @@ const Products = ({ backToHome }) => {
       />
       <div className="productBody servicesBody">
         <h2>PRODUCTS</h2>
+        <div className="productMenu">
+          {DUMMY_DATA.map((item, index) => {
+            return (
+              <ProductCard
+                key={item.key}
+                prdName={item.name}
+                prdDesc={item.description}
+                prdPrice={item.price}
+                prdBrand={item.types}
+                prdNum={index}
+              />
+            );
+          })}
+        </div>
       </div>
       <BottomSec />
     </div>
