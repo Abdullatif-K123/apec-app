@@ -5,8 +5,8 @@ import doted from "../../public/assets/jpg&png/doted.png";
 const LoadingPage = () => {
   return (
     <div className="loadingMain">
-      <Image src={doted} width={250} height={200} className="doted" />
       <div className="bodyContainer">
+        <Image src={doted} width={250} height={200} className="doted" />
         <div className="textContainer">
           <h2 className="animationText">
             WELCOME <br />
