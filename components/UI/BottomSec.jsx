@@ -4,13 +4,20 @@ import whatsAppWhite from "../../public/assets/svg/whatsappWhite.svg";
 import location from "../../public/assets/icons/location.png";
 import locationWhite from "../../public/assets/icons/locationWhite.png";
 import Image from "next/image";
+import { useRouter } from "next/router";
 const BottomSec = ({ red }) => {
+  const router = useRouter();
   return (
     <div className="bottomSection">
       <i className={`singleIcon ${red ? "redIcon" : ""}`}>
         <Image src={red ? whatsAppWhite : whatsApp} width={35} height={35} />
       </i>
-      <i className={`singleIcon ${red ? "redIcon" : ""}`}>
+      <i
+        className={`singleIcon ${red ? "redIcon" : ""}`}
+        onClick={() => {
+          router.push("/locations");
+        }}
+      >
         <Image src={red ? locationWhite : location} width={35} height={35} />
       </i>
       <div className={`download ${red ? "redIcon" : ""}`}>

@@ -68,7 +68,7 @@ a {
   .doted {
     position: fixed;
     margin: 0 auto;
-    z-index: 0;
+    z-index: -1;
   }
   .doted2 {
     position: fixed;
@@ -453,6 +453,7 @@ a {
     padding-top: 15px;
   }
   .servicesBody {
+    z-index: 5;
     width: 93%;
     background-color: #f8f8f8;
     display: flex;
@@ -554,6 +555,7 @@ a {
     font-weight: bold;
     color: #484848;
     font-family: "montserrat";
+    z-index: 5;
   }
   /* Products Card */
   .productCardMain {
@@ -591,5 +593,44 @@ a {
     border-radius: 50%;
     position: relative;
     margin-right: -15px;
+  }
+  /* Location Section */
+  .location {
+    height: 100vh;
+    row-gap: 50px;
+    padding-bottom: 80px;
+  }
+  .locationBody {
+    background-color: rgb(234, 234, 234);
+    width: 83%;
+  }
+  .locationBody > h2 {
+    color: rgb(208, 3, 31) !important;
+  }
+  .locationMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 20px;
+  }
+  .singlStation {
+    background-color: rgb(241, 241, 241);
+    font-family: "montserrat";
+    font-weight: 200;
+    color: rgb(208, 3, 31);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    row-gap: 3px;
+    z-index: 5;
+  }
+  .dotedLocation {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    z-index: 1;
   }
 }
