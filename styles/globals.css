@@ -30,6 +30,12 @@ a {
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: "montserrat";
+  src: url("../public//assets//montassrat/Montserrat-Bold.ttf");
+
+  font-weight: bold;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -255,7 +261,7 @@ a {
     background-size: cover;
     background-position: center;
     background-image: url("../public//assets//jpg&png/background-coffee.jpg");
-    height: 100vh;
+    height: 103vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -448,11 +454,76 @@ a {
     padding: 20px 0px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
+    height: 100%;
+    overflow: auto;
   }
-  .servicesBody > h2 {
-    color: #484848;
+  .servicesBody > h1 {
+    color: rgb(72, 72, 72);
+    font-family: "montserrat";
+    font-weight: bold;
   }
-
+  /* Service Card */
+  .serviceMenu {
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+    row-gap: 45px;
+    padding: 30px 0;
+  }
+  .serviceCard {
+    color: rgb(255, 255, 255);
+    background-color: rgb(61, 61, 61);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    height: 40%;
+  }
+  .serRed {
+    background-color: rgb(208, 3, 31);
+  }
+  .serRed > .servicePrice {
+    border: 0.5px solid rgb(208, 3, 31);
+  }
+  .servicePrice {
+    padding: 22px 25px;
+    background-color: rgb(245, 242, 242);
+    border-radius: 50%;
+    border: 0.5px solid rgb(61, 61, 61);
+    position: relative;
+    margin-left: 65%;
+    margin-top: -17px;
+  }
+  .servicePrice > h3 {
+    color: rgb(208, 3, 31);
+  }
+  .serviceBodyCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 30px 50px 30px;
+    column-gap: 25px;
+  }
+  .cardServiceImage {
+    border-radius: 12px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .serviceDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "montserrat";
+  }
+  .serviceDesc > p {
+    font-size: 11px;
+    opacity: 0.9;
+  }
+  .serviceDesc > h1 {
+    font-size: 25px;
+    font-weight: bold;
+  }
   /* Products Section */
   .productsPage {
     display: flex;

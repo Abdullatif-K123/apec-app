@@ -4,7 +4,44 @@ import BottomSec from "../UI/BottomSec";
 import apecRed from "../../public/assets/svg/apecRed.svg";
 import { useRouter } from "next/router";
 import backSpaceRed from "../../public/assets/jpg&png/backArrowRed.png";
-
+import ServiceCard from "../UI/ServiceCard";
+const DUMMY_DATA = [
+  {
+    id: 3223234,
+    serviceName: "CAR WACHING",
+    description: "amazing car washing for your baby",
+    imageURL: "https://djeifjldskf.com",
+    price: 5,
+  },
+  {
+    id: 3223234,
+    serviceName: "CAR WACHING",
+    description: "amazing car washing for your baby",
+    imageURL: "https://djeifjldskf.com",
+    price: 5,
+  },
+  {
+    id: 3223234,
+    serviceName: "CAR WACHING",
+    description: "amazing car washing for your baby",
+    imageURL: "https://djeifjldskf.com",
+    price: 5,
+  },
+  {
+    id: 3223234,
+    serviceName: "CAR WACHING",
+    description: "amazing car washing for your baby",
+    imageURL: "https://djeifjldskf.com",
+    price: 5,
+  },
+  {
+    id: 3223234,
+    serviceName: "CAR WACHING",
+    description: "amazing car washing for your baby",
+    imageURL: "https://djeifjldskf.com",
+    price: 5,
+  },
+];
 const Services = ({ backToHome }) => {
   const router = useRouter();
   return (
@@ -25,7 +62,21 @@ const Services = ({ backToHome }) => {
         }}
       />
       <div className="servicesBody">
-        <h2>SERVICES</h2>
+        <h1>SERVICES</h1>
+        <div className="serviceMenu">
+          {DUMMY_DATA.map((serv, index) => {
+            return (
+              <ServiceCard
+                key={serv.id}
+                className={index}
+                nameServ={serv.serviceName}
+                imgServ={serv.imageURL}
+                descServ={serv.description}
+                priceServ={serv.price}
+              />
+            );
+          })}
+        </div>
       </div>
       <BottomSec red={"red"} />
     </div>
