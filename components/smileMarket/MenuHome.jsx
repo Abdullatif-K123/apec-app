@@ -19,7 +19,7 @@ const MenuHome = () => {
       <Image
         src={smileMarket}
         width={210}
-        height={210}
+        height={100}
         className="images"
         onClick={() => {
           router.push("/");

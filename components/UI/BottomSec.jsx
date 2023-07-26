@@ -1,5 +1,5 @@
 import React from "react";
-import whatsApp from "../../public/assets/svg/whatsApp.svg";
+import whatsApp from "../../public/assets/jpg&png/whatsApp.webp";
 import whatsAppWhite from "../../public/assets/svg/whatsappWhite.svg";
 import location from "../../public/assets/icons/location.png";
 import locationWhite from "../../public/assets/icons/locationWhite.png";

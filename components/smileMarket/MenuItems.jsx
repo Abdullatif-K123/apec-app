@@ -49,7 +49,7 @@ const MenuItems = ({ clickedMenuHandle }) => {
       <Image
         src={smileMarket}
         width={180}
-        height={100}
+        height={90}
         onClick={() => {
           router.push("/");
         }}

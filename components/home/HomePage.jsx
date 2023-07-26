@@ -49,7 +49,7 @@ const HomePage = (props) => {
         </div>
         <div className="singleFuel">
           <section className="fuelTitle fuelGrayDark">
-            <p>Gazoline Price</p>
+            <p>Gaz Price</p>
           </section>
           <section className="fuelPrice">1,500,000.00 LBP</section>
         </div>
