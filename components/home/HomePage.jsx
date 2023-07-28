@@ -48,7 +48,7 @@ const HomePage = (props) => {
           </section>
           <section className="fuelPrice">750,000.00 LBP</section>
         </div>
-        <Image src={doted} width={250} height={200} className="doted2" />
+        <Image src={doted} width={300} height={200} className="doted2" />
         <div className="singleFuel">
           <section className="fuelTitle fuelGrayDark">
             <p>Gaz Price</p>

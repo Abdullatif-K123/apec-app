@@ -43,7 +43,7 @@ const ProductHome = () => {
           <Image src={carWatshing} width={130} height={130} />
         </div>
         <div
-          className="bigCard"
+          className="bigCard cardF"
           onClick={() => {
             setClickHandler("services");
           }}
