@@ -17,6 +17,7 @@ const DUMMY_DATA = [
 const LocationPg = () => {
   return (
     <div className="homeMain location">
+      <Image src={doted} width={250} height={200} className="dotedLocation" />
       <div className="headSection">
         <h3>Sayrafa 1$=80,000</h3>
       </div>
@@ -32,7 +33,6 @@ const LocationPg = () => {
             );
           })}
         </div>
-        <Image src={doted} width={250} height={200} className="dotedLocation" />
       </div>
       <BottomSec />
     </div>

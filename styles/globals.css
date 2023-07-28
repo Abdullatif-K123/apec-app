@@ -141,6 +141,7 @@ a {
     font-family: "montserrat";
     color: #ffffff;
     overflow: none;
+    z-index: 2;
   }
   .headSection {
     background-color: #f1f1f1;
@@ -578,7 +579,7 @@ a {
     font-weight: bold;
     color: #484848;
     font-family: "montserrat";
-    z-index: 5;
+    z-index: 45;
   }
   /* Products Card */
   .productCardMain {
@@ -629,6 +630,7 @@ a {
   .locationBody {
     background-color: rgb(234, 234, 234);
     width: 83%;
+    z-index: 55;
   }
   .locationBody > h2 {
     color: rgb(208, 3, 31) !important;
@@ -651,13 +653,13 @@ a {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 16px;
     row-gap: 3px;
-    z-index: 5;
+    z-index: 15;
   }
   .dotedLocation {
     position: fixed;
     bottom: 15px;
     left: 0;
-    z-index: 1;
+    z-index: 0;
   }
 }
 
