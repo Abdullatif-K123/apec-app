@@ -348,7 +348,7 @@ a {
   }
   .headMenu {
     color: #ffb900;
-    border-bottom: 2px solid #626161;
+    border-bottom: 2px solid #aeaaaa;
     width: 80%;
   }
   .headMenu > h2 {
@@ -370,6 +370,9 @@ a {
     justify-content: space-between;
     width: 100%;
   }
+  .itemTitle > p {
+    color: #ffffff;
+  }
   .itemTitle > p:nth-child(2) {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -388,6 +391,7 @@ a {
   .lastTwoItem {
     position: relative;
     background-color: #c68f06;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
