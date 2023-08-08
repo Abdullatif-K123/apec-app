@@ -9,11 +9,14 @@ import { useRouter } from "next/router";
 
 const HomePage = (props) => {
   const router = useRouter();
+  console.log(props.data.prices);
+  const whatsApp = props.data.prices.whatsapp_number;
 
+  const dataPrices = props.data.prices;
   return (
     <div className="homeMain">
       <div className="headSection">
-        <h3>Sayrafa 1$=80,000</h3>
+        <h3>Sayrafa 1$={dataPrices.currency_rate}</h3>
       </div>
       <div className="cardSection">
         <div
@@ -40,23 +43,23 @@ const HomePage = (props) => {
           <section className="fuelTitle fuelRed">
             <p>Gazoline Price</p>
           </section>
-          <section className="fuelPrice">1,500,000.00 LBP</section>
+          <section className="fuelPrice">{dataPrices.fuel_price} LBP</section>
         </div>
         <div className="singleFuel">
           <section className="fuelTitle fuelGray">
             <p>Diesel Price</p>
           </section>
-          <section className="fuelPrice">750,000.00 LBP</section>
+          <section className="fuelPrice">{dataPrices.diesel_price} LBP</section>
         </div>
         <Image src={doted} width={300} height={200} className="doted2" />
         <div className="singleFuel">
           <section className="fuelTitle fuelGrayDark">
             <p>Gaz Price</p>
           </section>
-          <section className="fuelPrice">1,500,000.00 LBP</section>
+          <section className="fuelPrice">{dataPrices.gas_price} LBP</section>
         </div>
       </div>
-      <BottomSec />
+      <BottomSec whatsAppnum={whatsApp} />
     </div>
   );
 };

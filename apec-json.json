@@ -1,0 +1,92 @@
+{
+  "prices": {
+    "lira_price": "80,000",
+    "gazolin_price": "1,500000",
+    "diesel_price": "750,00",
+    "gaz_price": "1,5000000"
+  },
+  "smile_market": {
+    "drinks": [
+      { "name": "Espresso", "price": 1 },
+      { "name": "Double Espresso", "price": 1 },
+      { "name": "Nesscafe", "price": 1 },
+      {
+        "name": "Nesscafe special",
+        "secondary": "Big Cup, nestle and Nescafe",
+        "price": 1
+      },
+      {
+        "name": "Moccachino",
+        "secondary": "Coffee, cacao, nestle and milk",
+        "price": 1
+      }
+    ],
+    "service": {
+      "name": "Service",
+      "secondary": "water other thing",
+      "price": 1
+    },
+    "extra_service": {
+      "name": "Extra Service",
+      "secondary": "Extra service",
+      "price": 1
+    }
+  },
+  "apec": {
+    "services": [
+      {
+        "id": 3223234,
+        "serviceName": "CAR WACHING",
+        "description": "amazing car washing for your car",
+        "imageURL": "https://djeifjldskf.com",
+        "price": 5
+      },
+      {
+        "id": 3223234,
+        "serviceName": "CAR WACHING",
+        "description": "amazing car washing for your car",
+        "imageURL": "https://djeifjldskf.com",
+        "price": 5
+      },
+      {
+        "id": 3223234,
+        "serviceName": "CAR WACHING",
+        "description": "amazing car washing for your car",
+        "imageURL": "https://djeifjldskf.com",
+        "price": 5
+      }
+    ],
+    "products": [
+      {
+        "id": "ewrew324234",
+        "name": "WINDSCREEN WIPERS",
+        "description": "Part synthetic engine oil, 1L",
+        "imgUrl": "",
+        "price": 5
+      },
+      {
+        "id": "ewrewdsf324234",
+        "name": "CASTROL LUBES",
+        "description": "Part synthetic engine oil, 1L",
+        "types": "5W-30",
+        "imgUrl": "",
+        "price": 5
+      },
+      {
+        "id": "ewrew3asdf24234",
+        "name": "CASTROL LUBES",
+        "description": "Part synthetic engine oil, 1L",
+        "types": "5W-40",
+        "imgUrl": "",
+        "price": 5
+      }
+    ]
+  },
+  "location": [
+    { "id": 32423423, "name": "El Mina" },
+    { "id": 32423423, "name": "El BADAWI" },
+    { "id": 32423423, "name": "El Miten" },
+    { "id": 32423423, "name": "Azmi" },
+    { "id": 32423423, "name": "El Mina" }
+  ]
+}

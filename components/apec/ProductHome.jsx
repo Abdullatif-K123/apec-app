@@ -7,17 +7,19 @@ import Services from "./Services";
 import Products from "./Products";
 import { useRouter } from "next/router";
 import backSpaceRed from "../../public/assets/jpg&png/backArrowRed.png";
-const ProductHome = () => {
+const ProductHome = ({ data }) => {
+  const dataApec = data.apec;
+  console.log(data.apec);
   const router = useRouter();
   const [clickHandler, setClickHandler] = useState("");
   const backToHome = () => {
     setClickHandler("");
   };
   if (clickHandler === "services") {
-    return <Services backToHome={backToHome} />;
+    return <Services backToHome={backToHome} services={dataApec.services} />;
   }
   if (clickHandler === "products") {
-    return <Products backToHome={backToHome} />;
+    return <Products backToHome={backToHome} products={dataApec.products} />;
   }
   return (
     <div className="productMain">
@@ -29,6 +31,7 @@ const ProductHome = () => {
         onClick={() => {
           router.push("/");
         }}
+        alt="img product"
       />
       <Image
         src={apecRed}
@@ -37,10 +40,11 @@ const ProductHome = () => {
         onClick={() => {
           router.push("/");
         }}
+        alt="img product"
       />
       <div className="typeProduct">
         <div className="smallCardLeft">
-          <Image src={carWatshing} width={130} height={130} />
+          <Image src={carWatshing} width={130} height={130} alt="carWashing" />
         </div>
         <div
           className="bigCard cardF"
@@ -69,7 +73,7 @@ const ProductHome = () => {
           </p>
         </div>
         <div className="smallCardRight">
-          <Image src={carWatshing} width={130} height={130} />
+          <Image src={carWatshing} width={130} height={130} alt="carWashing" />
         </div>
       </div>
       <BottomSec red={"red"} />

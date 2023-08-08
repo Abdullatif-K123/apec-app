@@ -42,7 +42,7 @@ const DUMMY_DATA = [
     price: 5,
   },
 ];
-const Services = ({ backToHome }) => {
+const Services = ({ backToHome, services }) => {
   const router = useRouter();
   return (
     <div className="servicesMain">
@@ -52,6 +52,7 @@ const Services = ({ backToHome }) => {
         height={50}
         className=" backspaceArrowTop"
         onClick={backToHome}
+        alt="back space"
       />
       <Image
         src={apecRed}
@@ -60,17 +61,18 @@ const Services = ({ backToHome }) => {
         onClick={() => {
           router.push("/");
         }}
+        alt="logo ic"
       />
       <div className="servicesBody">
         <h1>SERVICES</h1>
         <div className="serviceMenu">
-          {DUMMY_DATA.map((serv, index) => {
+          {services.map((serv, index) => {
             return (
               <ServiceCard
                 key={serv.id}
                 className={index}
-                nameServ={serv.serviceName}
-                imgServ={serv.imageURL}
+                nameServ={serv.name}
+                imgServ={serv.image_url}
                 descServ={serv.description}
                 priceServ={serv.price}
               />

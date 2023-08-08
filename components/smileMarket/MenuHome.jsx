@@ -5,17 +5,18 @@ import smile from "../../public/assets/svg/smile.svg";
 import MenuItems from "./MenuItems";
 import { useRouter } from "next/router";
 import backSpaceMarket from "../../public/assets/jpg&png/backArrow.png";
-const MenuHome = () => {
+const MenuHome = ({ data }) => {
   const router = useRouter();
   const [clickedMenu, setClickedMenu] = useState(false);
   const clickedMenuHandle = () => {
     setClickedMenu(false);
   };
   if (clickedMenu) {
-    return <MenuItems clickedMenuHandle={clickedMenuHandle} />;
+    return <MenuItems clickedMenuHandle={clickedMenuHandle} data={data} />;
   }
   return (
     <div className="menuMain">
+      <div className="backgroundImage"></div>
       <Image
         src={smileMarket}
         width={210}
@@ -39,6 +40,7 @@ const MenuHome = () => {
         width={50}
         height={50}
         className="backspaceArrowTop"
+        alt="back space"
         onClick={() => {
           router.push("/");
         }}

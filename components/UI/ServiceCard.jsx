@@ -9,7 +9,7 @@ const ServiceCard = (props) => {
       </div>
       <div className="serviceBodyCard">
         <Image
-          src={carWashing}
+          src={props.imgServ}
           width={170}
           height={150}
           className="cardServiceImage"

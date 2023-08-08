@@ -1,45 +1,12 @@
 import React from "react";
-
 import Image from "next/image";
 import BottomSec from "../UI/BottomSec";
 import apecWhite from "../../public/assets/svg/apeWhite.svg";
 import ProductCard from "../UI/ProductCard";
 import backSpaceRed from "../../public/assets/jpg&png/backSpaceWhite.png";
 import { useRouter } from "next/router";
-const DUMMY_DATA = [
-  {
-    id: "ewrew324234",
-    name: "WINDSCREEN WIPERS",
-    description: "Part synthetic engine oil, 1L",
-    imgUrl: "",
-    price: 5,
-  },
-  {
-    id: "ewrewdsf324234",
-    name: "CASTROL LUBES",
-    description: "Part synthetic engine oil, 1L",
-    types: "5W-30",
-    imgUrl: "",
-    price: 5,
-  },
-  {
-    id: "ewrew3asdf24234",
-    name: "CASTROL LUBES",
-    description: "Part synthetic engine oil, 1L",
-    types: "5W-40",
-    imgUrl: "",
-    price: 5,
-  },
-  {
-    id: "ewrew3asdf24234",
-    name: "WINDSCREEN WIPERS",
-    description: "Part synthetic engine oil, 1L",
-    types: "10W-40",
-    imgUrl: "",
-    price: 5,
-  },
-];
-const Products = ({ backToHome }) => {
+const Products = ({ backToHome, products }) => {
+  console.log(products);
   const router = useRouter();
   return (
     <div className="productsPage">
@@ -61,14 +28,15 @@ const Products = ({ backToHome }) => {
       <div className="productBody servicesBody">
         <h2>PRODUCTS</h2>
         <div className="productMenu">
-          {DUMMY_DATA.map((item, index) => {
+          {products.map((item, index) => {
             return (
               <ProductCard
-                key={item.key}
+                key={item.id}
                 prdName={item.name}
                 prdDesc={item.description}
                 prdPrice={item.price}
                 prdBrand={item.types}
+                prdImg={item.image_url}
                 prdNum={index}
               />
             );
