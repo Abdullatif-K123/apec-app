@@ -7,7 +7,7 @@ import Services from "./Services";
 import Products from "./Products";
 import { useRouter } from "next/router";
 import backSpaceRed from "../../public/assets/jpg&png/backArrowRed.png";
-const ProductHome = ({ data }) => {
+const ProductHome = ({ data, whatsApp }) => {
   const dataApec = data.apec;
   console.log(data.apec);
   const router = useRouter();
@@ -16,10 +16,22 @@ const ProductHome = ({ data }) => {
     setClickHandler("");
   };
   if (clickHandler === "services") {
-    return <Services backToHome={backToHome} services={dataApec.services} />;
+    return (
+      <Services
+        backToHome={backToHome}
+        services={dataApec.services}
+        whatsApp={whatsApp}
+      />
+    );
   }
   if (clickHandler === "products") {
-    return <Products backToHome={backToHome} products={dataApec.products} />;
+    return (
+      <Products
+        backToHome={backToHome}
+        products={dataApec.products}
+        whatsApp={whatsApp}
+      />
+    );
   }
   return (
     <div className="productMain">
@@ -76,7 +88,7 @@ const ProductHome = ({ data }) => {
           <Image src={carWatshing} width={130} height={130} alt="carWashing" />
         </div>
       </div>
-      <BottomSec red={"red"} />
+      <BottomSec red={"red"} whatsAppnum={whatsApp} />
     </div>
   );
 };

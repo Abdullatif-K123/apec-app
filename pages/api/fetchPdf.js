@@ -1,25 +1,26 @@
 import axios from "axios";
 
 export const downloadPDF = async () => {
-  try {
-    const response = await axios.get(
-      "http://apec.mootawer.com/api/setting/download/pdfBrochure",
-      {
-        responseType: "blob", // Set the response type to 'blob'
-      }
-    );
-    console.log(response);
-    // Create a temporary URL for the downloaded file
-    const url = window.URL.createObjectURL(new Blob([response.data]));
+  return axios({
+    url: "http://apec.mootawer.com/api/setting/download/pdfBrochure",
+    method: "GET",
+    responseType: "blob",
+  })
+    .then((response) => {
+      const href = window.URL.createObjectURL(response.data);
 
-    // Create a link element and simulate a click to trigger the download
-    const link = document.createElement("a");
-    link.href = url;
-    link.setAttribute("download", "file.pdf");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  } catch (error) {
-    console.error("Error downloading PDF:", error);
-  }
+      const anchorElement = document.createElement("a");
+
+      anchorElement.href = href;
+      anchorElement.download = "apec-profile.pdf";
+
+      document.body.appendChild(anchorElement);
+      anchorElement.click();
+
+      document.body.removeChild(anchorElement);
+      window.URL.revokeObjectURL(href);
+    })
+    .catch((error) => {
+      console.log("error: ", error);
+    });
 };

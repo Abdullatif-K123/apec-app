@@ -5,44 +5,8 @@ import apecRed from "../../public/assets/svg/apecRed.svg";
 import { useRouter } from "next/router";
 import backSpaceRed from "../../public/assets/jpg&png/backArrowRed.png";
 import ServiceCard from "../UI/ServiceCard";
-const DUMMY_DATA = [
-  {
-    id: 3223234,
-    serviceName: "CAR WACHING",
-    description: "amazing car washing for your car",
-    imageURL: "https://djeifjldskf.com",
-    price: 5,
-  },
-  {
-    id: 3223234,
-    serviceName: "CAR WACHING",
-    description: "amazing car washing for your car",
-    imageURL: "https://djeifjldskf.com",
-    price: 5,
-  },
-  {
-    id: 3223234,
-    serviceName: "CAR WACHING",
-    description: "amazing car washing for your car",
-    imageURL: "https://djeifjldskf.com",
-    price: 5,
-  },
-  {
-    id: 3223234,
-    serviceName: "CAR WACHING",
-    description: "amazing car washing for your car",
-    imageURL: "https://djeifjldskf.com",
-    price: 5,
-  },
-  {
-    id: 3223234,
-    serviceName: "CAR WACHING",
-    description: "amazing car washing for your car",
-    imageURL: "https://djeifjldskf.com",
-    price: 5,
-  },
-];
-const Services = ({ backToHome, services }) => {
+
+const Services = ({ backToHome, services, whatsApp }) => {
   const router = useRouter();
   return (
     <div className="servicesMain">
@@ -80,7 +44,7 @@ const Services = ({ backToHome, services }) => {
           })}
         </div>
       </div>
-      <BottomSec red={"red"} />
+      <BottomSec red={"red"} whatsAppnum={whatsApp} />
     </div>
   );
 };

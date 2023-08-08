@@ -6,24 +6,7 @@ import locationWhite from "../../public/assets/icons/locationWhite.png";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { downloadPDF } from "@/pages/api/fetchPdf";
-import axios from "axios";
-const BottomSec = ({ red }) => {
-  const [whatsNum, setWhatsNum] = useState("+961");
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get(
-          "http://apec.mootawer.com/api/setting"
-        );
-
-        const num = response.data.prices.whatsapp_number;
-        setWhatsNum(num);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    fetchData();
-  }, []);
+const BottomSec = ({ red, whatsAppnum }) => {
   const handleClick = () => {
     console.log("clicking");
     downloadPDF();
@@ -31,7 +14,9 @@ const BottomSec = ({ red }) => {
   //handling whatsApp refer to specific number
   const handleWhatsAppClick = () => {
     const message = "Hello, to APEC how we can help you?";
-    const url = `https://wa.me/${whatsNum}?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${whatsAppnum}?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(url, "_blank");
   };
   const router = useRouter();

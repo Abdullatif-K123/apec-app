@@ -5,7 +5,7 @@ import apecWhite from "../../public/assets/svg/apeWhite.svg";
 import ProductCard from "../UI/ProductCard";
 import backSpaceRed from "../../public/assets/jpg&png/backSpaceWhite.png";
 import { useRouter } from "next/router";
-const Products = ({ backToHome, products }) => {
+const Products = ({ backToHome, products, whatsApp }) => {
   console.log(products);
   const router = useRouter();
   return (
@@ -43,7 +43,7 @@ const Products = ({ backToHome, products }) => {
           })}
         </div>
       </div>
-      <BottomSec />
+      <BottomSec whatsAppnum={whatsApp} />
     </div>
   );
 };
