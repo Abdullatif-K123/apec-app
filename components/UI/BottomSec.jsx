@@ -5,12 +5,11 @@ import location from "../../public/assets/icons/location.png";
 import locationWhite from "../../public/assets/icons/locationWhite.png";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { downloadPDF } from "@/pages/api/fetchPdf";
+import useDownloader from "react-use-downloader";
 const BottomSec = ({ red, whatsAppnum }) => {
-  const handleClick = () => {
-    console.log("clicking");
-    downloadPDF();
-  };
+  const { download } = useDownloader();
+  const url = "http://apec.mootawer.com/api/setting/download/pdfBrochure";
+
   //handling whatsApp refer to specific number
   const handleWhatsAppClick = () => {
     const message = "Hello, to APEC how we can help you?";
@@ -37,7 +36,10 @@ const BottomSec = ({ red, whatsAppnum }) => {
       >
         <Image src={red ? locationWhite : location} width={35} height={35} />
       </i>
-      <div className={`download ${red ? "redIcon" : ""}`} onClick={handleClick}>
+      <div
+        className={`download ${red ? "redIcon" : ""}`}
+        onClick={() => download(url, "Apec-cp.pdf")}
+      >
         <h3>Download</h3>
         <p>our company profile</p>
       </div>
