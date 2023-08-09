@@ -213,9 +213,9 @@ a {
   .fuelPrice {
     background: #f1f1f1;
     border-radius: 10px;
-    font-family: sans-serif;
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
     font-size: 25px;
-    font-weight: 200;
     color: #444444;
     text-align: center;
     padding: 14px 60px;
@@ -274,7 +274,7 @@ a {
 
   /* Menu section  */
   .menuMain {
-    height: 103vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
