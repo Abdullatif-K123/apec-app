@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import BottomSec from "../UI/BottomSec";
 import Image from "next/image";
