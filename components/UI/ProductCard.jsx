@@ -12,15 +12,15 @@ const ProductCard = ({
     <div className="productCardMain">
       <Image
         src={prdImg}
-        width={110}
-        height={130}
+        width={90}
+        height={90}
         className="imagProduct"
         alt="product Img"
       />
       <div className="prdCardDesc">
         <h3>{prdName}</h3>
         <h4>{prdBrand}</h4>
-        <p>{prdDesc}</p>
+        <p>{prdDesc ? prdDesc.slice(0, 30) : ""}</p>
       </div>
       <div className="prdCardPrice">
         <h3>{prdPrice}$</h3>

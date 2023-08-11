@@ -49,7 +49,7 @@ const MenuItems = ({ clickedMenuHandle, data }) => {
                 <div className="singleItem lastTwo" key={index}>
                   <div className="itemTitle">
                     <p>{item.name}</p>
-                    <p>{item.description}</p>
+                    <p>{item ? item.description.slice(0, 50) : ""}</p>
                   </div>
                   <p className="itemPrice lastprice">
                     {item.price.toFixed(2)}$

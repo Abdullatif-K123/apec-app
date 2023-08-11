@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import apecWhite from "../../public/assets/svg/apeWhite.svg";
 import doted from "../../public/assets/jpg&png/doted.png";
-const LoadingPage = () => {
+const LoadingPage = ({ data }) => {
+  console.log(data);
   return (
     <div className="loadingMain">
       <div className="bodyContainer">
@@ -22,7 +23,7 @@ const LoadingPage = () => {
         </div>
       </div>
       <p dir="rtl" className="animationTexts">
-        طاقة لبكرا !
+        {data ? data.prices.apec_quote : "طاقة لبكرا!"}
       </p>
     </div>
   );

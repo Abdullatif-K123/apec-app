@@ -1,5 +1,4 @@
 import React from "react";
-
 import BottomSec from "../UI/BottomSec";
 import Image from "next/image";
 import ApecRounded from "../../public/assets/jpg&png/apecRound.png";

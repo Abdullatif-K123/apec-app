@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 import "@fontsource/montserrat/800.css";
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
-
+  const { data } = pageProps;
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
     return () => clearTimeout(timer);
   }, []);
   if (loading) {
-    return <LoadingPage />;
+    return <LoadingPage data={data} />;
   }
   return (
     <>

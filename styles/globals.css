@@ -541,13 +541,17 @@ a {
     border: 0.5px solid rgb(208, 3, 31);
   }
   .servicePrice {
-    padding: 22px 25px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(245, 242, 242);
     border-radius: 50%;
     border: 0.5px solid rgb(61, 61, 61);
     position: relative;
     margin-left: 65%;
-    margin-top: -17px;
+    margin-top: -20px;
   }
   .servicePrice > h3 {
     color: rgb(208, 3, 31);
@@ -611,6 +615,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 8px;
     background-color: rgb(235, 235, 235);
     width: 85%;
     min-height: 100px;
@@ -619,11 +624,13 @@ a {
     padding: 10px 0;
   }
   .imagProduct {
-    margin-top: -49px;
-    margin-left: -15px;
+    margin-top: -55px;
+    margin-left: -39px;
+    flex: 1;
   }
   .prdCardDesc {
     font-family: "montserrat";
+    flex: 1;
   }
   .prdCardDesc > h3 {
     color: rgb(208, 3, 31);
@@ -637,7 +644,11 @@ a {
     font-weight: 200;
   }
   .prdCardPrice {
-    padding: 22px 25px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(72, 72, 72);
     border-radius: 50%;
     position: relative;
