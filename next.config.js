@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["apec.mootawer.com"],
+    domains: ["https://dashboard.apec.com.lb"],
     unoptimized: true,
   },
 };
