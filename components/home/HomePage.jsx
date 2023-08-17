@@ -8,10 +8,9 @@ import { useRouter } from "next/router";
 
 const HomePage = (props) => {
   const router = useRouter();
-  console.log(props.data.prices);
-  const whatsApp = props.data.prices.whatsapp_number;
+  const whatsApp = props.data ? props.data?.prices.whatsapp_number : null;
 
-  const dataPrices = props.data.prices;
+  const dataPrices = props.data?.prices;
   return (
     <div className="homeMain">
       <div className="headSection">
