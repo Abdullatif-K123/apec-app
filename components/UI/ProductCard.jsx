@@ -5,7 +5,7 @@ const ProductCard = ({
   prdDesc,
   prdPrice,
   prdBrand,
-  prdNum,
+  prdNum, 
   prdImg,
 }) => {
   return (

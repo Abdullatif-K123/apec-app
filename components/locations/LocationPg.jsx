@@ -32,6 +32,7 @@ const LocationPg = ({ data, dataHome }) => {
           {dataLocatoin.map((station) => {
             return (
               <Link
+                key={station._id}
                 href={`https://www.google.com/maps/place/${station.url_site}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -45,7 +46,7 @@ const LocationPg = ({ data, dataHome }) => {
           })}
         </div>
       </div>
-      <BottomSec />
+      <BottomSec whatsAppnum={dataHome.prices.whatsapp_number} />
     </div>
   );
 };

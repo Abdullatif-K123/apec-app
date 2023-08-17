@@ -30,7 +30,7 @@ const MenuHome = ({ data }) => {
       <div
         className="menuContainer"
         onClick={() => {
-          setClickedMenu(true);
+          data.smile_market.length ? setClickedMenu(true) : null;
         }}
       >
         MENU

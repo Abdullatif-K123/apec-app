@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const downloadPDF = async () => {
   return axios({
-    url: "http://apec.mootawer.com/api/setting/download/pdfBrochure",
+    url: "https://dashboard.apec.com.lb/api/setting/download/pdfBrochure",
     method: "GET",
     responseType: "blob",
   })

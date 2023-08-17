@@ -4,7 +4,7 @@ import { fetchDataHome } from "./api/fetchHome";
 const index = ({ data }) => {
   return <HomePage data={data} />;
 };
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await fetchDataHome();
   return {
     props: {

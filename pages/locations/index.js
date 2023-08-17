@@ -5,7 +5,7 @@ import { fetchDataHome } from "../api/fetchHome";
 const index = ({ data, dataHome }) => {
   return <LocationPg data={data} dataHome={dataHome} />;
 };
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await fetchDataLocation();
   const dataHome = await fetchDataHome();
   return {

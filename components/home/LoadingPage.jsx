@@ -23,7 +23,7 @@ const LoadingPage = ({ data }) => {
         </div>
       </div>
       <p dir="rtl" className="animationTexts">
-        {data ? data.prices.apec_quote : "طاقة لبكرا!"}
+        {data.prices ? data.prices.apec_quote : "طاقة لبكرا!"}
       </p>
     </div>
   );
