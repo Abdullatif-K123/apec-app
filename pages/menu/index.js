@@ -5,7 +5,7 @@ const index = ({ data }) => {
   return <MenuHome data={data} />;
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await fetchMarket();
   return {
     props: {

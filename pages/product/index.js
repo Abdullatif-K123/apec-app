@@ -5,7 +5,7 @@ import { fetchDataHome } from "../api/fetchHome";
 const index = ({ data, whatsApp }) => {
   return <ProductHome data={data} whatsApp={whatsApp} />;
 };
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await fetchAppProduct();
   const datahome = await fetchDataHome();
   const whatsApp = datahome.prices.whatsapp_number;
