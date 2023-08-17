@@ -3,10 +3,8 @@ import Image from "next/image";
 import apecWhite from "../../public/assets/svg/apeWhite.svg";
 import doted from "../../public/assets/jpg&png/doted.png";
 const LoadingPage = ({ data }) => {
-  const quote = Object.keys(data).length
-    ? data.prices.apec_quote
-    : "طاقة لبكرا!";
-  console.log(data);
+  const quote = data ? data.prices.apec_quote : "طاقة لبكرا!";
+
   return (
     <div className="loadingMain">
       <div className="bodyContainer">
