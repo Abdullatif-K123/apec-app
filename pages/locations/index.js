@@ -2,8 +2,8 @@ import React from "react";
 import LocationPg from "@/components/locations/LocationPg";
 import { fetchDataLocation } from "../api/fetchLocation";
 import { fetchDataHome } from "../api/fetchHome";
-const index = ({ data, dataHome }) => {
-  return <LocationPg data={data} dataHome={dataHome} />;
+const index = ({ data, dataHome, quote }) => {
+  return <LocationPg data={data} dataHome={dataHome}  quote={quote} />;
 };
 export async function getServerSideProps() {
   const data = await fetchDataLocation();
@@ -12,6 +12,7 @@ export async function getServerSideProps() {
     props: {
       data,
       dataHome,
+      quote: dataHome.prices.apec_quote,
     },
   };
 }

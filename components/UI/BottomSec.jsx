@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import useDownloader from "react-use-downloader";
 const BottomSec = ({ red, whatsAppnum }) => {
   const { download } = useDownloader();
-  const url = "http://apec.mootawer.com/api/setting/download/pdfBrochure";
+  const url = "https://dashboard.apec.com.lb/api/setting/download/pdfBrochure";
 
   //handling whatsApp refer to specific number
   const handleWhatsAppClick = () => {

@@ -9,6 +9,7 @@ export async function getServerSideProps() {
   return {
     props: {
       data,
+     quote: data.prices.apec_quote,
     },
   };
 }

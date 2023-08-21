@@ -4,7 +4,10 @@ import "@/styles/globals.css";
 import "@fontsource/montserrat/800.css";
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
-  const { data } = pageProps;
+  const { quote } = pageProps;
+  
+  console.log("I'm here");
+  console.log(quote)
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -12,7 +15,7 @@ export default function App({ Component, pageProps }) {
     return () => clearTimeout(timer);
   }, []);
   if (loading) {
-    return <LoadingPage data={data} />;
+    return <LoadingPage quote={quote} />;
   }
   return (
     <>
