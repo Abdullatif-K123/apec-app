@@ -12,7 +12,7 @@ const ProductCard = ({
     <div className="productCardMain">
       <Image
         src={prdImg}
-        width={90}
+        width={60}
         height={90}
         className="imagProduct"
         alt="product Img"

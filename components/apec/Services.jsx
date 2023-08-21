@@ -27,7 +27,7 @@ const Services = ({ backToHome, services, whatsApp }) => {
         }}
         alt="logo ic"
       />
-      <div className="servicesBody">
+      <div className="servicesBody serviceM">
         <h1>SERVICES</h1>
         <div className="serviceMenu">
           {services.map((serv, index) => {
