@@ -20,52 +20,54 @@ const MenuItems = ({ clickedMenuHandle, data }) => {
         }}
         className="smileImages"
       />
-      {data.smile_market.map((singleMenu) => {
-        const drinksList = singleMenu.products;
-        const lastTwoItems = drinksList.slice(drinksList.length - 2);
-        return (
-          <dir className="menuItems">
-            <div className="headMenu">
-              <h2>{singleMenu.name}</h2>
-            </div>
-            <div className="bodyMenu">
-              {drinksList.map((item, index) => {
-                return (
-                  <>
-                    {index < drinksList.length - 2 ? (
-                      <div className="singleItem" key={index}>
-                        <div className="itemTitle">
-                          <p>{item.name}</p>
-                          <p>{item.description}</p>
-                        </div>
-                        <p className="itemPrice">{item.price.toFixed(2)}$</p>
-                      </div>
-                    ) : null}
-                  </>
-                );
-              })}
-            </div>
-            <div className="parentTwoItem">
-              <div className="lastTwoItem">
-                {lastTwoItems.map((item, index) => {
+      <dir className="menuItems">
+        {data.smile_market.map((singleMenu) => {
+          const drinksList = singleMenu.products;
+          const lastTwoItems = drinksList.slice(drinksList.length - 2);
+          return (
+            <>
+              {" "}
+              <div className="headMenu">
+                <h2>{singleMenu.name}</h2>
+              </div>
+              <div className="bodyMenu">
+                {drinksList.map((item, index) => {
                   return (
-                    <div className="singleItem lastTwo" key={index}>
-                      <div className="itemTitle">
-                        <p>{item.name}</p>
-                        <p>{item ? item.description.slice(0, 50) : ""}</p>
-                      </div>
-                      <p className="itemPrice lastprice">
-                        {item.price.toFixed(2)}$
-                      </p>
-                    </div>
+                    <>
+                      {index < drinksList.length - 2 ? (
+                        <div className="singleItem" key={index}>
+                          <div className="itemTitle">
+                            <p>{item.name}</p>
+                            <p>{item.description}</p>
+                          </div>
+                          <p className="itemPrice">{item.price.toFixed(2)}$</p>
+                        </div>
+                      ) : null}
+                    </>
                   );
                 })}
               </div>
-            </div>
-          </dir>
-        );
-      })}
-
+              <div className="parentTwoItem">
+                <div className="lastTwoItem">
+                  {lastTwoItems.map((item, index) => {
+                    return (
+                      <div className="singleItem lastTwo" key={index}>
+                        <div className="itemTitle">
+                          <p>{item.name}</p>
+                          <p>{item ? item.description.slice(0, 50) : ""}</p>
+                        </div>
+                        <p className="itemPrice lastprice">
+                          {item.price.toFixed(2)}$
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </>
+          );
+        })}
+      </dir>
       <Image
         src={backSpaceMarket}
         width={50}
