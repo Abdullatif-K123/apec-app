@@ -12,10 +12,7 @@ const BottomSec = ({ red, whatsAppnum }) => {
 
   //handling whatsApp refer to specific number
   const handleWhatsAppClick = () => {
-    const message = "Hello, to APEC how we can help you?";
-    const url = `https://wa.me/${whatsAppnum}?text=${encodeURIComponent(
-      message
-    )}`;
+    const url = `https://wa.me/${whatsAppnum}`;
     window.open(url, "_blank");
   };
   const router = useRouter();

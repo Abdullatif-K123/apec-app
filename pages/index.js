@@ -6,10 +6,11 @@ const index = ({ data }) => {
 };
 export async function getServerSideProps() {
   const data = await fetchDataHome();
+
   return {
     props: {
       data,
-     quote: data.prices.apec_quote,
+      quote: data.prices.apec_quote,
     },
   };
 }

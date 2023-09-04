@@ -148,14 +148,14 @@ a {
   }
   .headSection {
     background-color: #f1f1f1;
-    padding: 12px 60px;
+    padding: 12px 25px;
     color: #d60404;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   }
   .headSection > h3 {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 700;
   }
   .cardSection {
@@ -306,6 +306,9 @@ a {
     left: 0;
     filter: blur(3px); /* Adjust the blur amount as needed */
     z-index: -1;
+  }
+  .smileImages {
+    margin-top: 20px;
   }
   .images {
     margin-top: -15px;
@@ -507,10 +510,10 @@ a {
     padding: 20px 0px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-    height: 100%; 
+    height: 100%;
     overflow: auto;
   }
-  .serviceM{
+  .serviceM {
     margin-bottom: 60px;
   }
   .servicesBody > h1 {
@@ -535,7 +538,7 @@ a {
     row-gap: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 25px;
-    height: 40%;
+    height: 220px;
   }
   .serRed {
     background-color: rgb(208, 3, 31);
@@ -560,20 +563,20 @@ a {
     color: rgb(208, 3, 31);
   }
   .serviceBodyCard {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     padding: 0px 30px 40px 30px;
-    column-gap: 25px;
+    column-gap: 5px;
   }
   .cardServiceImage {
     border-radius: 12px;
+    margin-left: -35px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   }
   .serviceDesc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-self: center;
     font-family: "montserrat";
   }
   .serviceDesc > p {
@@ -582,9 +585,9 @@ a {
     color: #ffffff;
   }
   .serviceDesc > h1 {
-    font-size: 25px;
+    font-size: 26px;
     font-weight: bold;
-
+    text-align: justify;
     color: #ffffff;
   }
 
@@ -605,6 +608,7 @@ a {
     align-items: center;
     justify-content: space-between;
     row-gap: 40px;
+    width: 100%;
   }
   .productBody > h2 {
     font-size: 27px;
@@ -616,28 +620,28 @@ a {
   /* Products Card */
   .productCardMain {
     display: grid;
-  grid-template-columns: 2fr 3fr 1fr; /* Adjust the column widths as needed */
-  grid-gap: 5px; 
+    grid-template-columns: 2fr 3fr 1fr; /* Adjust the column widths as needed */
+    grid-gap: 5px;
     background-color: rgb(235, 235, 235);
-    width: 88%;
+    width: 85%;
     max-height: 90px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     padding: 10px 0;
   }
   .imagProduct {
-    margin-top: -34px; 
+    margin-top: -34px;
     justify-self: center;
   }
   .prdCardDesc {
     font-family: "montserrat";
-    
-    justify-self: flex-end;
+    align-self: center;
+    justify-self: center;
     align-items: center;
   }
   .prdCardDesc > h3 {
     color: rgb(218, 4, 32);
-    font-size: 18px ;
+    font-size: 18px;
   }
   .prdCardDesc > h4 {
     color: rgb(71, 71, 71);
@@ -716,6 +720,19 @@ a {
     left: 0;
     z-index: 0;
   }
+  .headStation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+  }
+  .headStation > h2 {
+    color: rgb(208, 3, 31) !important;
+  }
+  .backArrowStatoin {
+    margin-left: -50px;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 380px) {
@@ -725,7 +742,7 @@ a {
     padding: 0px 30px 40px 30px;
   }
   .serviceDesc > h1 {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
   }
   .serviceDesc > p {

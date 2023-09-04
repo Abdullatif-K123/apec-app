@@ -10,8 +10,8 @@ const ServiceCard = (props) => {
       <div className="serviceBodyCard">
         <Image
           src={props.imgServ}
-          width={170}
-          height={150}
+          width={135}
+          height={130}
           className="cardServiceImage"
         />
         <div className="serviceDesc">

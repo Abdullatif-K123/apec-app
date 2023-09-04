@@ -7,6 +7,7 @@ import doted from "../../public/assets/jpg&png/doted.png";
 import { useRouter } from "next/router";
 
 const HomePage = (props) => {
+  console.log(props);
   const router = useRouter();
   const whatsApp = props.data ? props.data?.prices.whatsapp_number : null;
 

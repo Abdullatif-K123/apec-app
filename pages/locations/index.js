@@ -3,7 +3,7 @@ import LocationPg from "@/components/locations/LocationPg";
 import { fetchDataLocation } from "../api/fetchLocation";
 import { fetchDataHome } from "../api/fetchHome";
 const index = ({ data, dataHome, quote }) => {
-  return <LocationPg data={data} dataHome={dataHome}  quote={quote} />;
+  return <LocationPg data={data} dataHome={dataHome} quote={quote} />;
 };
 export async function getServerSideProps() {
   const data = await fetchDataLocation();

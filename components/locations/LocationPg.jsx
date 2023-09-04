@@ -3,6 +3,7 @@ import BottomSec from "../UI/BottomSec";
 import location from "../../public/assets/icons/location.png";
 import doted from "../../public/assets/jpg&png/doted.png";
 import { useRouter } from "next/router";
+import arrowLeft from "/public/assets/jpg&png/backArrowRed.png";
 import locationWhite from "../../public/assets/icons/locationWhite.png";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,8 +27,18 @@ const LocationPg = ({ data, dataHome }) => {
       <div className="headSection">
         <h3>Sayrafa 1$={dataHome.prices.currency_rate}</h3>
       </div>
+
       <div className="productBody servicesBody locationBody">
-        <h2>STATIONS</h2>
+        <div className="headStation">
+          <Image
+            src={arrowLeft}
+            width={40}
+            height={40}
+            className="backArrowStatoin"
+            onClick={() => router.back()}
+          />
+          <h2>STATIONS</h2>
+        </div>
         <div className="locationMenu">
           {dataLocatoin.map((station) => {
             return (

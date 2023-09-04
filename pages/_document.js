@@ -10,6 +10,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="icon"
+          href="https://apec.com.lb/wp-content/uploads/2022/06/cropped-apec-fav-icon-180x180.png"
+        />
       </Head>
       <body>
         <Main />

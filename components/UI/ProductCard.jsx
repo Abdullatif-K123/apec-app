@@ -5,15 +5,15 @@ const ProductCard = ({
   prdDesc,
   prdPrice,
   prdBrand,
-  prdNum, 
+  prdNum,
   prdImg,
 }) => {
   return (
     <div className="productCardMain">
       <Image
         src={prdImg}
-        width={70 }
-        height={100}
+        width={70}
+        height={90}
         className="imagProduct"
         alt="product Img"
       />
