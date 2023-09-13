@@ -5,6 +5,11 @@ export const downloadPDF = async () => {
     url: "https://dashboard.apec.com.lb/api/setting/download/pdfBrochure",
     method: "GET",
     responseType: "blob",
+    onDownloadProgress: (progressEvent) => {
+      let percentCompleted = Math.round(
+        (progressEvent.loaded * 100) / progressEvent.total
+      ); // you can use this to show user percentage of file downloaded
+    },
   })
     .then((response) => {
       const href = window.URL.createObjectURL(response.data);

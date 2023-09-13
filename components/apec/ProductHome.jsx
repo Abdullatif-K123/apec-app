@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 import backSpaceRed from "../../public/assets/jpg&png/backArrowRed.png";
 const ProductHome = ({ data, whatsApp }) => {
   const dataApec = data.apec;
-  console.log(data);
   const router = useRouter();
   const [clickHandler, setClickHandler] = useState("");
   const backToHome = () => {

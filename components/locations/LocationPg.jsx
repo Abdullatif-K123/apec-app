@@ -20,7 +20,7 @@ const DUMMY_DATA = [
 const LocationPg = ({ data, dataHome }) => {
   const router = useRouter();
   const dataLocatoin = data.branches;
-  console.log(dataHome);
+
   return (
     <div className="homeMain location">
       <Image src={doted} width={250} height={200} className="dotedLocation" />
@@ -41,10 +41,18 @@ const LocationPg = ({ data, dataHome }) => {
         </div>
         <div className="locationMenu">
           {dataLocatoin.map((station) => {
+            const isLocationUrl = station.url_site.startsWith("https://");
+
             return (
               <Link
                 key={station._id}
-                href={`https://www.google.com/maps/place/${station.url_site}`}
+                href={`${
+                  isLocationUrl
+                    ? station.url_site
+                    : `https://www.google.com/maps/place/${encodeURIComponent(
+                        station.url_site
+                      )}`
+                }`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

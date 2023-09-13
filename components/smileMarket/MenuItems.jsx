@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import backSpaceMarket from "../../public/assets/jpg&png/backArrow.png";
 
 const MenuItems = ({ clickedMenuHandle, data }) => {
-  console.log(data);
   const router = useRouter();
 
   return (
