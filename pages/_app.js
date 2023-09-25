@@ -5,9 +5,7 @@ import "@fontsource/montserrat/800.css";
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
   const { quote } = pageProps;
-  
-  console.log("I'm here");
-  console.log(quote)
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);

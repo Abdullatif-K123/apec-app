@@ -5,16 +5,20 @@ import ApecRounded from "../../public/assets/jpg&png/apecRound.png";
 import SmileMarket from "../../public/assets/svg/smileMarketRound.svg";
 import doted from "../../public/assets/jpg&png/doted.png";
 import { useRouter } from "next/router";
-
+import formatThousands from "format-thousands";
 const HomePage = (props) => {
   const router = useRouter();
   const whatsApp = props.data ? props.data?.prices.whatsapp_number : null;
-
   const dataPrices = props.data?.prices;
+  const pricingCurrency = formatThousands(parseFloat(dataPrices.currency_rate));
+  const fuelPrice = formatThousands(parseFloat(dataPrices.fuel_price));
+  const dieselPrice = formatThousands(parseFloat(dataPrices.diesel_price));
+  const gasPrice = formatThousands(parseFloat(dataPrices.gas_price));
+
   return (
     <div className="homeMain">
       <div className="headSection">
-        <h3>Sayrafa 1$={dataPrices.currency_rate}</h3>
+        <h3>Sayrafa 1$={pricingCurrency}</h3>
       </div>
       <div className="cardSection">
         <div
@@ -41,20 +45,20 @@ const HomePage = (props) => {
           <section className="fuelTitle fuelRed">
             <p>Gazoline Price</p>
           </section>
-          <section className="fuelPrice">{dataPrices.fuel_price} LBP</section>
+          <section className="fuelPrice">{fuelPrice} LBP</section>
         </div>
         <div className="singleFuel">
           <section className="fuelTitle fuelGray">
             <p>Diesel Price</p>
           </section>
-          <section className="fuelPrice">{dataPrices.diesel_price} LBP</section>
+          <section className="fuelPrice">{dieselPrice} LBP</section>
         </div>
         <Image src={doted} width={300} height={200} className="doted2" />
         <div className="singleFuel">
           <section className="fuelTitle fuelGrayDark">
             <p>Gaz Price</p>
           </section>
-          <section className="fuelPrice">{dataPrices.gas_price} LBP</section>
+          <section className="fuelPrice">{gasPrice} LBP</section>
         </div>
       </div>
       <BottomSec whatsAppnum={whatsApp} />
