@@ -27,12 +27,11 @@ a {
   text-decoration: none;
 }
 .bottomNotification {
-  margin-top: 10px !important;
   display: flex;
   flex-direction: column;
 
   z-index: 99;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
 }
