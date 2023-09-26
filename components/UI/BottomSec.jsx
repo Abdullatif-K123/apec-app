@@ -19,9 +19,9 @@ const BottomSec = ({ red, whatsAppnum }) => {
   const router = useRouter();
 
   return (
-    <>
+    <div className="bottomNotification">
       {" "}
-      {isInProgress ? (
+      {!isInProgress ? (
         <div className="notification">
           {" "}
           <label for="file" className={`${red ? "redText" : ""}`}>
@@ -53,7 +53,7 @@ const BottomSec = ({ red, whatsAppnum }) => {
           <p>our company profile</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
