@@ -21,7 +21,7 @@ const BottomSec = ({ red, whatsAppnum }) => {
   return (
     <div className="bottomNotification">
       {" "}
-      {!isInProgress ? (
+      {isInProgress ? (
         <div className="notification">
           {" "}
           <label for="file" className={`${red ? "redText" : ""}`}>
