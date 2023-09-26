@@ -143,6 +143,9 @@ a {
   }
 
   /* Home page */
+  .download {
+    user-select: none;
+  }
   .homeMain {
     background-color: #b4131c;
     height: 101vh;

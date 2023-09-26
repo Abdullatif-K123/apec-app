@@ -17,22 +17,7 @@ const BottomSec = ({ red, whatsAppnum }) => {
     window.open(url, "_blank");
   };
   const router = useRouter();
-  const [downloads, setDownload] = useState(false);
-  const onButtonClick = () => {
-    fetch(
-      "https://dashboard.apec.com.lb/api/setting/download/pdfBrochure"
-    ).then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "SamplePDF.pdf";
-        alink.click();
-      });
-    });
-  };
+
   return (
     <>
       {" "}
@@ -62,7 +47,7 @@ const BottomSec = ({ red, whatsAppnum }) => {
         </i>
         <div
           className={`download ${red ? "redIcon" : ""}`}
-          onClick={onButtonClick}
+          onClick={() => download(url, "Apec-cp.pdf")}
         >
           <h3>Download</h3>
           <p>our company profile</p>
